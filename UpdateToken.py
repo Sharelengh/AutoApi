@@ -14,21 +14,21 @@ if os.getenv('ACCOUNT')!='':
     account=json.loads(os.getenv('ACCOUNT'))
 else:
     account={'client_id':[],'client_secret':[],'ms_token':[]}
-account_add=os.getenv('ACCOUNT_ADD').split(",")
-account_del=os.getenv('ACCOUNT_DEL')
+#account_add=os.getenv('ACCOUNT_ADD').split(",")
+#account_del=os.getenv('ACCOUNT_DEL')
 #更新？
-if account_del != '' or account_add != [''] :
-    print('<<<<<<<<<<<<<<<配置信息更新中>>>>>>>>>>>>>>>')
+#if account_del != '' or account_add != [''] :
+#    print('<<<<<<<<<<<<<<<配置信息更新中>>>>>>>>>>>>>>>')
 #删除？
-if account_del != '':
-    print('删除账号中')
-    for i in range(3):
-        del account[accountkey[i]][int(account_del)-1]
+#if account_del != '':
+#    print('删除账号中')
+#    for i in range(3):
+#        del account[accountkey[i]][int(account_del)-1]
 #增加？
-if account_add != ['']:
-    print('增加账号中')
-    for i in range(3):
-        account[accountkey[i]].append(account_add[i])
+#if account_add != ['']:
+#    print('增加账号中')
+#    for i in range(3):
+#        account[accountkey[i]].append(account_add[i])
 #自定义url?
 redirect_uri=os.getenv('REDIRECT_URI')
 if redirect_uri =='':
