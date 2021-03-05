@@ -39,11 +39,11 @@ if os.getenv('OTHER_CONFIG') =='':
     other_config={'email':[],'tg_bot':[]}
 else:
     other_config=json.loads(os.getenv('OTHER_CONFIG'))
-if os.getenv('EMAIL') != '':
-    print('更新邮箱')
-    other_config['email']=[]
-    for i in range(2):    
-        other_config['email'].append(os.getenv('EMAIL').split(',')[i])
+#if os.getenv('EMAIL') != '':
+#    print('更新邮箱')
+#    other_config['email']=[]
+#    for i in range(2):    
+#        other_config['email'].append(os.getenv('EMAIL').split(',')[i])
 if os.getenv('TG_BOT') != '' and os.getenv('TG_BOT') != ' ':
     print('更新TG推送')
     other_config['tg_bot']=[]
